@@ -1,0 +1,26 @@
+{
+  "raw_rows": 13611,
+  "raw_columns": 17,
+  "feature_count": 16,
+  "target_column": "Class",
+  "missing_cells": 0,
+  "exact_duplicate_rows_extra": 68,
+  "classes_containing_duplicate_rows": {
+    "HOROZ": 136
+  },
+  "conflicting_feature_label_groups": 0,
+  "non_numeric_feature_columns": [],
+  "target_classes": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "target_class_count": 7,
+  "clean_rows": 13543,
+  "removed_exact_duplicates": 68,
+  "clean_missing_cells": 0
+}

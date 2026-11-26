@@ -1,0 +1,18 @@
+column,description,unit_or_type
+Area,Luas area biji kacang dan jumlah piksel di dalam batas objek,pixel
+Perimeter,Panjang keliling atau batas luar biji kacang,
+MajorAxisLength,Jarak antara dua ujung pada garis terpanjang yang dapat ditarik melalui biji,
+MinorAxisLength,Panjang garis tegak lurus terhadap sumbu utama yang menggambarkan lebar biji,
+AspectRation,Rasio MajorAxisLength terhadap MinorAxisLength; ejaan kolom dipertahankan sesuai CSV sumber,
+Eccentricity,Eksentrisitas elips yang memiliki momen geometris sama dengan wilayah biji,
+ConvexArea,Jumlah piksel pada convex hull terkecil yang mencakup area biji,pixel
+EquivDiameter,Diameter lingkaran yang memiliki luas sama dengan luas biji,
+Extent,Rasio jumlah piksel biji terhadap area bounding box,
+Solidity,Rasio area biji terhadap area convex hull,
+roundness,Ukuran kebulatan yang dihitung dari luas dan perimeter,
+Compactness,Ukuran kekompakan atau kebulatan objek,
+ShapeFactor1,Faktor bentuk geometris 1,
+ShapeFactor2,Faktor bentuk geometris 2,
+ShapeFactor3,Faktor bentuk geometris 3,
+ShapeFactor4,Faktor bentuk geometris 4,
+Class,Label varietas kacang yang menjadi target klasifikasi,kategori

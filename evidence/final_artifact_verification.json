@@ -1,0 +1,25 @@
+{
+  "notebook_code_cells": 16,
+  "notebook_executed_code_cells": 16,
+  "notebook_error_outputs": 0,
+  "training_rows": 10834,
+  "testing_rows": 2709,
+  "partition_overlap": 0,
+  "model_reload_prediction_checks": [
+    {
+      "model": "decision_tree",
+      "prediction_rows": 2709,
+      "matches_saved_predictions": true,
+      "accuracy": 0.8947951273532669,
+      "macro_f1": 0.9081359458187459
+    },
+    {
+      "model": "random_forest",
+      "prediction_rows": 2709,
+      "matches_saved_predictions": true,
+      "accuracy": 0.9176818014027316,
+      "macro_f1": 0.9296011688115208
+    }
+  ],
+  "required_artifacts_present": true
+}
