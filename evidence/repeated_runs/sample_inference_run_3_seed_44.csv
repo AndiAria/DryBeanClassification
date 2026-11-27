@@ -1,0 +1,9 @@
+run,random_state,sample_number,test_row_index,actual_class,predicted_class,correct
+3,44,1,3857,BOMBAY,BOMBAY,True
+3,44,2,9720,SIRA,SIRA,True
+3,44,3,9189,SIRA,SIRA,True
+3,44,4,9811,SIRA,SIRA,True
+3,44,5,12851,DERMASON,DERMASON,True
+3,44,6,10683,DERMASON,DERMASON,True
+3,44,7,2903,BARBUNYA,BARBUNYA,True
+3,44,8,9499,SIRA,SIRA,True

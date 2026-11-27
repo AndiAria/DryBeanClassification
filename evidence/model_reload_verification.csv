@@ -1,5 +1,0 @@
-model,artifact,reload_prediction_match,artifact_size_bytes
-Decision Tree,decision_tree_tuned.joblib,True,95217
-Random Forest,random_forest_tuned.joblib,True,17145553
-Decision Tree (baseline),decision_tree_baseline.joblib,True,170081
-Random Forest (baseline),random_forest_baseline.joblib,True,14091377

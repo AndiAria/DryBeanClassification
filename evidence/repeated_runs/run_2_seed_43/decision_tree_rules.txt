@@ -1,0 +1,1018 @@
+DECISION TREE RULES
+Run: 2
+Random State: 43
+Model: Decision Tree
+Actual Tree Depth: 12
+Number of Leaves: 337
+Classes: ['BARBUNYA', 'BOMBAY', 'CALI', 'DERMASON', 'HOROZ', 'SEKER', 'SIRA']
+======================================================================
+
+|--- MajorAxisLength <= 280.397
+|   |--- ShapeFactor1 <= 0.007
+|   |   |--- ShapeFactor3 <= 0.727
+|   |   |   |--- Solidity <= 0.990
+|   |   |   |   |--- Perimeter <= 746.548
+|   |   |   |   |   |--- Extent <= 0.722
+|   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- Extent >  0.722
+|   |   |   |   |   |   |--- EquivDiameter <= 226.668
+|   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |--- Solidity <= 0.988
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Solidity >  0.988
+|   |   |   |   |   |   |   |   |   |--- roundness <= 0.921
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- roundness >  0.921
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- EquivDiameter >  226.668
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |--- Perimeter >  746.548
+|   |   |   |   |   |--- Compactness <= 0.847
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |   |   |--- ShapeFactor3 <= 0.673
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- ShapeFactor3 >  0.673
+|   |   |   |   |   |   |   |   |--- Area <= 41251.500
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Area >  41251.500
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.721
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.721
+|   |   |   |   |   |   |   |   |   |   |--- MajorAxisLength <= 274.799
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- MajorAxisLength >  274.799
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.800
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent >  0.800
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- Compactness >  0.847
+|   |   |   |   |   |   |--- MinorAxisLength <= 197.363
+|   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- MinorAxisLength >  197.363
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |--- Solidity >  0.990
+|   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |--- Solidity <= 0.992
+|   |   |   |   |   |   |--- ConvexArea <= 42638.500
+|   |   |   |   |   |   |   |--- Extent <= 0.769
+|   |   |   |   |   |   |   |   |--- Perimeter <= 748.653
+|   |   |   |   |   |   |   |   |   |--- Perimeter <= 744.457
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Perimeter >  744.457
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Perimeter >  748.653
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- Extent >  0.769
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 191.450
+|   |   |   |   |   |   |   |   |   |--- MinorAxisLength <= 188.440
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- MinorAxisLength >  188.440
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  191.450
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- ConvexArea >  42638.500
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- Solidity >  0.992
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |--- ShapeFactor3 <= 0.715
+|   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- ShapeFactor3 >  0.715
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |--- ShapeFactor3 >  0.727
+|   |   |   |--- Compactness <= 0.868
+|   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |--- MinorAxisLength <= 194.395
+|   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- MinorAxisLength >  194.395
+|   |   |   |   |   |   |--- Perimeter <= 770.596
+|   |   |   |   |   |   |   |--- AspectRation <= 1.364
+|   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- AspectRation >  1.364
+|   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- Perimeter >  770.596
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |--- Solidity <= 0.991
+|   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |--- roundness <= 0.864
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- roundness >  0.864
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |   |   |   |--- ShapeFactor3 <= 0.730
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- ShapeFactor3 >  0.730
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.989
+|   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.989
+|   |   |   |   |   |   |   |   |   |   |--- Compactness <= 0.861
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Compactness >  0.861
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |   |   |   |--- Extent <= 0.748
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Extent >  0.748
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |--- Solidity >  0.991
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |   |--- Compactness >  0.868
+|   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |--- MinorAxisLength <= 195.190
+|   |   |   |   |   |   |--- Perimeter <= 699.030
+|   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- Perimeter >  699.030
+|   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- MinorAxisLength >  195.190
+|   |   |   |   |   |   |--- MinorAxisLength <= 198.504
+|   |   |   |   |   |   |   |--- Extent <= 0.773
+|   |   |   |   |   |   |   |   |--- Area <= 38963.000
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Area >  38963.000
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- Extent >  0.773
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- MinorAxisLength >  198.504
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |--- Perimeter <= 832.663
+|   |   |   |   |   |   |--- Compactness <= 0.876
+|   |   |   |   |   |   |   |--- AspectRation <= 1.302
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- AspectRation >  1.302
+|   |   |   |   |   |   |   |   |--- Perimeter <= 703.161
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Perimeter >  703.161
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.797
+|   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.797
+|   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- Compactness >  0.876
+|   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |--- Perimeter >  832.663
+|   |   |   |   |   |   |--- class: SEKER
+|   |--- ShapeFactor1 >  0.007
+|   |   |--- Perimeter <= 711.314
+|   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |--- ConvexArea <= 34994.500
+|   |   |   |   |   |--- Extent <= 0.756
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |--- Extent >  0.756
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |--- ConvexArea >  34994.500
+|   |   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |   |--- ConvexArea <= 36467.500
+|   |   |   |   |   |   |   |--- Perimeter <= 690.229
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- Perimeter >  690.229
+|   |   |   |   |   |   |   |   |--- Extent <= 0.735
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Extent >  0.735
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.989
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.989
+|   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- ConvexArea >  36467.500
+|   |   |   |   |   |   |   |--- roundness <= 0.924
+|   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- roundness >  0.924
+|   |   |   |   |   |   |   |   |--- roundness <= 0.941
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- roundness >  0.941
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |--- Perimeter <= 686.856
+|   |   |   |   |   |--- roundness <= 0.964
+|   |   |   |   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |   |   |   |--- Extent <= 0.810
+|   |   |   |   |   |   |   |   |   |--- EquivDiameter <= 206.975
+|   |   |   |   |   |   |   |   |   |   |--- MajorAxisLength <= 240.207
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.990
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.990
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- MajorAxisLength >  240.207
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- EquivDiameter >  206.975
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Extent >  0.810
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |   |   |   |--- Compactness <= 0.907
+|   |   |   |   |   |   |   |   |--- Perimeter <= 676.600
+|   |   |   |   |   |   |   |   |   |--- MinorAxisLength <= 173.223
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- MinorAxisLength >  173.223
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Perimeter >  676.600
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.984
+|   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.757
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Extent >  0.757
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.984
+|   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.807
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Extent >  0.807
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.810
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent >  0.810
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- Compactness >  0.907
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- roundness >  0.964
+|   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |--- Perimeter >  686.856
+|   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |   |--- Perimeter <= 701.769
+|   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.983
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.983
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- Perimeter >  701.769
+|   |   |   |   |   |   |   |   |--- AspectRation <= 1.448
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- AspectRation >  1.448
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.993
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.993
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |   |   |   |--- roundness <= 0.894
+|   |   |   |   |   |   |   |   |--- roundness <= 0.893
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.808
+|   |   |   |   |   |   |   |   |   |   |--- ConvexArea <= 35959.000
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- ConvexArea >  35959.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.808
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- roundness >  0.893
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- roundness >  0.894
+|   |   |   |   |   |   |   |   |--- Eccentricity <= 0.723
+|   |   |   |   |   |   |   |   |   |--- AspectRation <= 1.446
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 688.193
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter >  688.193
+|   |   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 705.634
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Perimeter >  705.634
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- AspectRation >  1.446
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Eccentricity >  0.723
+|   |   |   |   |   |   |   |   |   |--- MajorAxisLength <= 269.510
+|   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.708
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.707
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent >  0.707
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Extent >  0.708
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- MajorAxisLength >  269.510
+|   |   |   |   |   |   |   |   |   |   |--- AspectRation <= 1.619
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- AspectRation >  1.619
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |--- Perimeter >  711.314
+|   |   |   |--- Perimeter <= 739.548
+|   |   |   |   |--- Extent <= 0.781
+|   |   |   |   |   |--- Solidity <= 0.988
+|   |   |   |   |   |   |--- ConvexArea <= 36580.000
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.991
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.991
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |   |   |--- Perimeter <= 721.807
+|   |   |   |   |   |   |   |   |   |--- Perimeter <= 712.219
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- Perimeter >  712.219
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Perimeter >  721.807
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- ConvexArea >  36580.000
+|   |   |   |   |   |   |   |--- roundness <= 0.895
+|   |   |   |   |   |   |   |   |--- MajorAxisLength <= 271.820
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.987
+|   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.739
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.986
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.986
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Extent >  0.739
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.987
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- MajorAxisLength >  271.820
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- roundness >  0.895
+|   |   |   |   |   |   |   |   |--- Solidity <= 0.987
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.749
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.749
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Solidity >  0.987
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- Solidity >  0.988
+|   |   |   |   |   |   |--- ConvexArea <= 36385.000
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- ConvexArea >  36385.000
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.994
+|   |   |   |   |   |   |   |   |--- roundness <= 0.912
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- roundness >  0.912
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.994
+|   |   |   |   |   |   |   |   |--- Eccentricity <= 0.753
+|   |   |   |   |   |   |   |   |   |--- roundness <= 0.911
+|   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.990
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.718
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent >  0.718
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.990
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- roundness >  0.911
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Eccentricity >  0.753
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 733.757
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor3 <= 0.651
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor3 >  0.651
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter >  733.757
+|   |   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 735.288
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Perimeter >  735.288
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |--- Extent >  0.781
+|   |   |   |   |   |--- roundness <= 0.917
+|   |   |   |   |   |   |--- MinorAxisLength <= 170.061
+|   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- MinorAxisLength >  170.061
+|   |   |   |   |   |   |   |--- roundness <= 0.890
+|   |   |   |   |   |   |   |   |--- Extent <= 0.789
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Extent >  0.789
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- roundness >  0.890
+|   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.994
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.994
+|   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.782
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- Extent >  0.782
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.990
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.990
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- roundness >  0.917
+|   |   |   |   |   |   |--- Solidity <= 0.989
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- Solidity >  0.989
+|   |   |   |   |   |   |   |--- roundness <= 0.924
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- roundness >  0.924
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 183.840
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  183.840
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |--- Perimeter >  739.548
+|   |   |   |   |--- roundness <= 0.862
+|   |   |   |   |   |--- Extent <= 0.714
+|   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- Extent >  0.714
+|   |   |   |   |   |   |--- Extent <= 0.755
+|   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- Extent >  0.755
+|   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |--- roundness >  0.862
+|   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |--- ConvexArea <= 40152.500
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- ConvexArea >  40152.500
+|   |   |   |   |   |   |   |--- MajorAxisLength <= 277.777
+|   |   |   |   |   |   |   |   |--- Eccentricity <= 0.740
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Eccentricity >  0.740
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- MajorAxisLength >  277.777
+|   |   |   |   |   |   |   |   |--- Area <= 39976.500
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Area >  39976.500
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |--- Perimeter <= 745.784
+|   |   |   |   |   |   |   |--- Perimeter <= 740.249
+|   |   |   |   |   |   |   |   |--- Eccentricity <= 0.731
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Eccentricity >  0.731
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- Perimeter >  740.249
+|   |   |   |   |   |   |   |   |--- Extent <= 0.793
+|   |   |   |   |   |   |   |   |   |--- AspectRation <= 1.471
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- AspectRation >  1.471
+|   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.990
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.990
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Extent >  0.793
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- Perimeter >  745.784
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 184.250
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  184.250
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |--- MajorAxisLength <= 278.496
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- MajorAxisLength >  278.496
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|--- MajorAxisLength >  280.397
+|   |--- ShapeFactor1 <= 0.006
+|   |   |--- ShapeFactor1 <= 0.004
+|   |   |   |--- class: BOMBAY
+|   |   |--- ShapeFactor1 >  0.004
+|   |   |   |--- ShapeFactor3 <= 0.615
+|   |   |   |   |--- roundness <= 0.801
+|   |   |   |   |   |--- Compactness <= 0.742
+|   |   |   |   |   |   |--- Compactness <= 0.708
+|   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |--- Compactness >  0.708
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |   |--- Area <= 69422.000
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |--- Area >  69422.000
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.987
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.994
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.994
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.987
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |   |--- EquivDiameter <= 305.991
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- EquivDiameter >  305.991
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |--- Compactness >  0.742
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.991
+|   |   |   |   |   |   |   |--- AspectRation <= 1.746
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- AspectRation >  1.746
+|   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.991
+|   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |--- roundness >  0.801
+|   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |--- MajorAxisLength <= 363.753
+|   |   |   |   |   |   |   |   |--- roundness <= 0.848
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.727
+|   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.727
+|   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- roundness >  0.848
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.981
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.981
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- MajorAxisLength >  363.753
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |--- roundness <= 0.807
+|   |   |   |   |   |   |   |   |   |   |   |--- Eccentricity <= 0.817
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |   |--- Eccentricity >  0.817
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |--- roundness >  0.807
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |--- roundness <= 0.827
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |--- roundness >  0.827
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.727
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent >  0.727
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |   |   |--- Compactness <= 0.735
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- Compactness >  0.735
+|   |   |   |   |   |   |   |   |   |   |--- roundness <= 0.819
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |--- roundness >  0.819
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.801
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |   |--- Extent >  0.801
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |--- Solidity <= 0.988
+|   |   |   |   |   |   |   |   |--- EquivDiameter <= 285.132
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- EquivDiameter >  285.132
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- Solidity >  0.988
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.005
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.005
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.707
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.707
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 947.472
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter >  947.472
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.990
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.990
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |--- Solidity <= 0.989
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |--- Solidity >  0.989
+|   |   |   |   |   |   |   |--- ShapeFactor3 <= 0.609
+|   |   |   |   |   |   |   |   |--- roundness <= 0.865
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.707
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.707
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- roundness >  0.865
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- ShapeFactor3 >  0.609
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |--- ShapeFactor3 >  0.615
+|   |   |   |   |--- roundness <= 0.875
+|   |   |   |   |   |--- roundness <= 0.843
+|   |   |   |   |   |   |--- MajorAxisLength <= 305.403
+|   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |--- MajorAxisLength >  305.403
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.979
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.979
+|   |   |   |   |   |   |   |   |--- MajorAxisLength <= 440.960
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.985
+|   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.985
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- MajorAxisLength >  440.960
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |--- roundness >  0.843
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.993
+|   |   |   |   |   |   |   |--- AspectRation <= 1.502
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- AspectRation >  1.502
+|   |   |   |   |   |   |   |   |--- Compactness <= 0.803
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- Compactness >  0.803
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.993
+|   |   |   |   |   |   |   |--- AspectRation <= 1.583
+|   |   |   |   |   |   |   |   |--- Perimeter <= 899.233
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- Perimeter >  899.233
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.988
+|   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.988
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.001
+|   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.001
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- AspectRation >  1.583
+|   |   |   |   |   |   |   |   |--- Extent <= 0.707
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- Extent >  0.707
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.799
+|   |   |   |   |   |   |   |   |   |   |--- MinorAxisLength <= 232.095
+|   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |--- MinorAxisLength >  232.095
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.799
+|   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |--- roundness >  0.875
+|   |   |   |   |   |--- MajorAxisLength <= 339.950
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |   |--- Perimeter <= 897.191
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Perimeter >  897.191
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |   |--- roundness <= 0.923
+|   |   |   |   |   |   |   |   |   |--- MinorAxisLength <= 212.535
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- MinorAxisLength >  212.535
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- roundness >  0.923
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |--- Extent <= 0.801
+|   |   |   |   |   |   |   |   |--- Perimeter <= 855.126
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Perimeter >  855.126
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- Extent >  0.801
+|   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |--- MajorAxisLength >  339.950
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |   |--- Extent <= 0.799
+|   |   |   |   |   |   |   |   |--- Extent <= 0.711
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- Extent >  0.711
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.005
+|   |   |   |   |   |   |   |   |   |   |--- Area <= 72237.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |--- Area >  72237.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.005
+|   |   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- Extent >  0.799
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 246.415
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  246.415
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |   |--- Solidity <= 0.991
+|   |   |   |   |   |   |   |   |--- roundness <= 0.894
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- roundness >  0.894
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |--- Solidity >  0.991
+|   |   |   |   |   |   |   |   |--- Compactness <= 0.795
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- Compactness >  0.795
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |--- ShapeFactor1 >  0.006
+|   |   |--- Compactness <= 0.741
+|   |   |   |--- Eccentricity <= 0.841
+|   |   |   |   |--- Solidity <= 0.987
+|   |   |   |   |   |--- AspectRation <= 1.831
+|   |   |   |   |   |   |--- roundness <= 0.757
+|   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |--- roundness >  0.757
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |--- AspectRation >  1.831
+|   |   |   |   |   |   |--- roundness <= 0.820
+|   |   |   |   |   |   |   |--- Area <= 57683.000
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- Area >  57683.000
+|   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |--- roundness >  0.820
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |--- Solidity >  0.987
+|   |   |   |   |   |--- ShapeFactor4 <= 0.993
+|   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |--- ShapeFactor4 >  0.993
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |--- Compactness <= 0.737
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- Compactness >  0.737
+|   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |--- Eccentricity >  0.841
+|   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |--- ShapeFactor3 <= 0.521
+|   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |--- Solidity <= 0.980
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.984
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.984
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- Solidity >  0.980
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |   |--- Compactness <= 0.718
+|   |   |   |   |   |   |   |   |   |   |--- Extent <= 0.815
+|   |   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |   |   |--- Extent >  0.815
+|   |   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |   |--- Compactness >  0.718
+|   |   |   |   |   |   |   |   |   |   |--- Compactness <= 0.719
+|   |   |   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |   |   |--- Compactness >  0.719
+|   |   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |--- MinorAxisLength <= 196.321
+|   |   |   |   |   |   |   |   |--- Solidity <= 0.977
+|   |   |   |   |   |   |   |   |   |--- Solidity <= 0.977
+|   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |   |--- Solidity >  0.977
+|   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |--- Solidity >  0.977
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- MinorAxisLength >  196.321
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 196.468
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  196.468
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |--- ShapeFactor3 >  0.521
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |--- Solidity <= 0.978
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- Solidity >  0.978
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |--- Extent <= 0.699
+|   |   |   |   |   |   |   |   |--- Extent <= 0.660
+|   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |--- Extent >  0.660
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- Extent >  0.699
+|   |   |   |   |   |   |   |   |--- Solidity <= 0.985
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |   |   |--- Solidity >  0.985
+|   |   |   |   |   |   |   |   |   |--- Extent <= 0.807
+|   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |   |--- Extent >  0.807
+|   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |--- Compactness >  0.741
+|   |   |   |--- roundness <= 0.835
+|   |   |   |   |--- Compactness <= 0.765
+|   |   |   |   |   |--- ShapeFactor4 <= 0.988
+|   |   |   |   |   |   |--- MajorAxisLength <= 367.313
+|   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |--- MajorAxisLength >  367.313
+|   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |--- ShapeFactor4 >  0.988
+|   |   |   |   |   |   |--- roundness <= 0.791
+|   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |--- roundness >  0.791
+|   |   |   |   |   |   |   |--- Extent <= 0.779
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |   |   |--- roundness <= 0.826
+|   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.983
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.983
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- roundness >  0.826
+|   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- Extent >  0.779
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |--- Compactness >  0.765
+|   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.992
+|   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.992
+|   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |   |--- Extent <= 0.776
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.995
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.995
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- Extent >  0.776
+|   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |--- roundness >  0.835
+|   |   |   |   |--- Perimeter <= 764.173
+|   |   |   |   |   |--- Perimeter <= 740.626
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.994
+|   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.994
+|   |   |   |   |   |   |   |--- Perimeter <= 729.570
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- Perimeter >  729.570
+|   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |--- Perimeter >  740.626
+|   |   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |   |--- Eccentricity <= 0.779
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 189.943
+|   |   |   |   |   |   |   |   |   |--- Perimeter <= 746.628
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- Perimeter >  746.628
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 762.783
+|   |   |   |   |   |   |   |   |   |   |   |--- MinorAxisLength <= 186.545
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- MinorAxisLength >  186.545
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter >  762.783
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  189.943
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |--- Eccentricity >  0.779
+|   |   |   |   |   |   |   |   |--- Extent <= 0.732
+|   |   |   |   |   |   |   |   |   |--- Perimeter <= 755.842
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.996
+|   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.996
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- Perimeter >  755.842
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Extent >  0.732
+|   |   |   |   |   |   |   |   |   |--- MajorAxisLength <= 296.074
+|   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.987
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor3 <= 0.571
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor3 >  0.571
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.987
+|   |   |   |   |   |   |   |   |   |   |   |--- Area <= 39514.500
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Area >  39514.500
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- MajorAxisLength >  296.074
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |   |--- MajorAxisLength <= 289.628
+|   |   |   |   |   |   |   |   |--- Extent <= 0.779
+|   |   |   |   |   |   |   |   |   |--- Area <= 38921.000
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- Area >  38921.000
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter <= 759.986
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor3 <= 0.611
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor3 >  0.611
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- Perimeter >  759.986
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity <= 0.989
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |   |--- Solidity >  0.989
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- Extent >  0.779
+|   |   |   |   |   |   |   |   |   |--- roundness <= 0.902
+|   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- roundness >  0.902
+|   |   |   |   |   |   |   |   |   |   |--- ConvexArea <= 42280.500
+|   |   |   |   |   |   |   |   |   |   |   |--- MajorAxisLength <= 281.677
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- MajorAxisLength >  281.677
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |   |--- ConvexArea >  42280.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- MajorAxisLength >  289.628
+|   |   |   |   |   |   |   |   |--- Extent <= 0.799
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- Extent >  0.799
+|   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |--- Perimeter >  764.173
+|   |   |   |   |   |--- Perimeter <= 896.958
+|   |   |   |   |   |   |--- roundness <= 0.922
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.999
+|   |   |   |   |   |   |   |   |--- MinorAxisLength <= 181.630
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.007
+|   |   |   |   |   |   |   |   |   |   |--- roundness <= 0.868
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.994
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.994
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |--- roundness >  0.868
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.997
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.997
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.007
+|   |   |   |   |   |   |   |   |   |   |--- class: DERMASON
+|   |   |   |   |   |   |   |   |--- MinorAxisLength >  181.630
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.978
+|   |   |   |   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.978
+|   |   |   |   |   |   |   |   |   |   |   |--- Compactness <= 0.839
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- Compactness >  0.839
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 <= 0.006
+|   |   |   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |   |   |--- ShapeFactor1 >  0.006
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 <= 0.002
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |   |   |   |--- ShapeFactor2 >  0.002
+|   |   |   |   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.999
+|   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |--- roundness >  0.922
+|   |   |   |   |   |   |   |--- Solidity <= 0.992
+|   |   |   |   |   |   |   |   |--- ConvexArea <= 46412.500
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- ConvexArea >  46412.500
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |--- Solidity >  0.992
+|   |   |   |   |   |   |   |   |--- Extent <= 0.785
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |   |   |   |--- Extent >  0.785
+|   |   |   |   |   |   |   |   |   |--- class: SEKER
+|   |   |   |   |   |--- Perimeter >  896.958
+|   |   |   |   |   |   |--- Extent <= 0.747
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.990
+|   |   |   |   |   |   |   |   |--- class: HOROZ
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.990
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.998
+|   |   |   |   |   |   |   |   |   |--- class: SIRA
+|   |   |   |   |   |   |   |   |--- ShapeFactor4 >  0.998
+|   |   |   |   |   |   |   |   |   |--- class: BARBUNYA
+|   |   |   |   |   |   |--- Extent >  0.747
+|   |   |   |   |   |   |   |--- ShapeFactor4 <= 0.993
+|   |   |   |   |   |   |   |   |--- roundness <= 0.845
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |   |--- roundness >  0.845
+|   |   |   |   |   |   |   |   |   |--- class: CALI
+|   |   |   |   |   |   |   |--- ShapeFactor4 >  0.993
+|   |   |   |   |   |   |   |   |--- class: SIRA

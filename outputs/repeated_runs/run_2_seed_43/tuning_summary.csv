@@ -1,0 +1,3 @@
+run,random_state,model,candidate_count,cv_folds,best_cv_macro_f1,best_cv_std,best_params,tuning_seconds
+2,43,Decision Tree,8,5,0.9212224709321802,0.006762715041197705,"{""max_depth"": 12, ""min_samples_leaf"": 3, ""min_samples_split"": 10}",10.377083300001686
+2,43,Random Forest,8,5,0.9354323617861515,0.006748126879706289,"{""max_depth"": 20, ""min_samples_leaf"": 2, ""n_estimators"": 250}",315.9023323000001

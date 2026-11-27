@@ -1,0 +1,11 @@
+run,random_state,model,training_rows,feature_count,best_cv_macro_f1,fit_seconds,best_parameters
+1,42,Decision Tree,10834,16,0.9206258356012578,0.34769960000994615,"{'max_depth': 12, 'min_samples_leaf': 3, 'min_samples_split': 10}"
+1,42,Random Forest,10834,16,0.9353444491112628,12.037842299992917,"{'max_depth': None, 'min_samples_leaf': 2, 'n_estimators': 250}"
+2,43,Decision Tree,10834,16,0.9212224709321802,0.28437330000451766,"{'max_depth': 12, 'min_samples_leaf': 3, 'min_samples_split': 10}"
+2,43,Random Forest,10834,16,0.9354323617861515,11.610296700004255,"{'max_depth': 20, 'min_samples_leaf': 2, 'n_estimators': 250}"
+3,44,Decision Tree,10834,16,0.9180790012160847,0.30293199999141507,"{'max_depth': 12, 'min_samples_leaf': 1, 'min_samples_split': 10}"
+3,44,Random Forest,10834,16,0.9347495369219981,11.872157800011337,"{'max_depth': 20, 'min_samples_leaf': 2, 'n_estimators': 250}"
+4,45,Decision Tree,10834,16,0.9199936434370993,0.29758769998443313,"{'max_depth': 12, 'min_samples_leaf': 3, 'min_samples_split': 10}"
+4,45,Random Forest,10834,16,0.9374301327466579,12.215935199987143,"{'max_depth': None, 'min_samples_leaf': 1, 'n_estimators': 250}"
+5,46,Decision Tree,10834,16,0.9177520306555564,0.2798258000111673,"{'max_depth': 12, 'min_samples_leaf': 3, 'min_samples_split': 10}"
+5,46,Random Forest,10834,16,0.9357305884713192,12.376209700014442,"{'max_depth': None, 'min_samples_leaf': 1, 'n_estimators': 250}"

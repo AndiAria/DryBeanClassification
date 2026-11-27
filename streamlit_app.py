@@ -6,22 +6,33 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(
-    page_title="Dry Bean Classification — Decision Tree vs Random Forest",
+    page_title="Dry Bean Classification — Decision Tree vs Random Forest (5-Run)",
     page_icon="🫘",
     layout="wide",
 )
 
 ROOT_DIR = Path(__file__).resolve().parent
 MODELS_DIR = ROOT_DIR / "models"
+REPEATED_MODELS_DIR = MODELS_DIR / "repeated_runs"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
+REPEATED_OUTPUTS_DIR = OUTPUTS_DIR / "repeated_runs"
 DATA_DIR = ROOT_DIR / "data"
 EVIDENCE_DIR = ROOT_DIR / "evidence"
+REPEATED_EVIDENCE_DIR = EVIDENCE_DIR / "repeated_runs"
 
-MODEL_FILES = {
-    "Random Forest (Tuned)": MODELS_DIR / "random_forest_tuned.joblib",
-    "Decision Tree (Tuned)": MODELS_DIR / "decision_tree_tuned.joblib",
-    "Random Forest (Baseline)": MODELS_DIR / "random_forest_baseline.joblib",
-    "Decision Tree (Baseline)": MODELS_DIR / "decision_tree_baseline.joblib",
+RUN_CONFIGS = [
+    (1, 42),
+    (2, 43),
+    (3, 44),
+    (4, 45),
+    (5, 46),
+]
+
+MODEL_FILENAMES = {
+    "Random Forest (Tuned)": "random_forest_tuned.joblib",
+    "Decision Tree (Tuned)": "decision_tree_tuned.joblib",
+    "Random Forest (Baseline)": "random_forest_baseline.joblib",
+    "Decision Tree (Baseline)": "decision_tree_baseline.joblib",
 }
 
 
@@ -66,22 +77,53 @@ def show_image_if_exists(path: Path, caption: str):
     if path.exists():
         st.image(str(path), caption=caption, width="stretch")
     else:
-        st.info(f"Gambar `{path.name}` tidak ditemukan di folder `outputs/`.")
+        st.info(f"Gambar `{path.name}` tidak ditemukan.")
+
+
+def get_available_runs() -> list[tuple[int, int]]:
+    runs = []
+    for run_num, seed in RUN_CONFIGS:
+        run_dir = REPEATED_MODELS_DIR / f"run_{run_num}_seed_{seed}"
+        if run_dir.exists() and any((run_dir / fn).exists() for fn in MODEL_FILENAMES.values()):
+            runs.append((run_num, seed))
+    return runs
+
+
+def get_run_models(run_num: int, seed: int) -> dict[str, Path]:
+    run_dir = REPEATED_MODELS_DIR / f"run_{run_num}_seed_{seed}"
+    return {
+        label: run_dir / fname
+        for label, fname in MODEL_FILENAMES.items()
+        if (run_dir / fname).exists()
+    }
 
 
 def main():
-    available_models = {name: path for name, path in MODEL_FILES.items() if path.exists()}
-    if not available_models:
-        st.error("Folder `models/` atau file `.joblib` tidak ditemukan.")
+    available_runs = get_available_runs()
+    if not available_runs:
+        st.error("Folder `models/repeated_runs/` atau file `.joblib` belum ditemukan.")
         st.stop()
 
-    metadata = load_json(EVIDENCE_DIR / "experiment_metadata.json")
+    metadata = (
+        load_json(REPEATED_OUTPUTS_DIR / "experiment_metadata.json")
+        or load_json(REPEATED_EVIDENCE_DIR / "experiment_metadata.json")
+    )
+    quality_report = load_json(EVIDENCE_DIR / "data_quality_report.json")
     stats_df = load_csv(OUTPUTS_DIR / "descriptive_statistics.csv", index_col=0)
     dict_df = load_csv(ROOT_DIR / "data_dictionary.csv")
     dataset_df = load_dataset()
 
     with st.sidebar:
         st.header("Konfigurasi Model")
+        run_labels = {f"Run {r} (Seed {s})": (r, s) for r, s in available_runs}
+        selected_run_label = st.selectbox(
+            "Putaran Eksperimen (5-Run)",
+            options=list(run_labels.keys()),
+            index=0,
+        )
+        run_num, seed = run_labels[selected_run_label]
+        available_models = get_run_models(run_num, seed)
+
         selected_model_name = st.selectbox(
             "Model Utama untuk Prediksi",
             options=list(available_models.keys()),
@@ -94,35 +136,33 @@ def main():
         )
 
         st.divider()
-        st.subheader("Ringkasan Eksperimen")
-        if metadata:
-            st.markdown(
-                f"""
-                - **Data mentah:** {metadata.get('raw_rows', 13611):,} baris
-                - **Data bersih:** {metadata.get('clean_rows', 13543):,} baris
-                - **Fitur:** {metadata.get('feature_count', 16)} fitur geometris
-                - **Kelas:** {len(metadata.get('classes', []))} varietas
-                - **Split:** 80% train / 20% test
-                - **CV:** {metadata.get('cv_folds', 5)}-fold Stratified
-                - **Metrik utama:** Macro F1
-                """
-            )
-        else:
-            st.markdown(
-                """
-                - **Model:** Decision Tree & Random Forest
-                - **Fitur:** 16 fitur geometris
-                - **Target:** 7 varietas Dry Bean
-                """
-            )
+        st.subheader("Ringkasan Eksperimen (5-Run)")
+        raw_rows = (quality_report or {}).get("raw_rows", 13611)
+        clean_rows = (quality_report or {}).get("clean_rows", 13543)
+        exp_cfg = (metadata or {}).get("experiment_configuration", {})
+        seeds = exp_cfg.get("random_states", [s for _, s in available_runs])
+        best_algo = (metadata or {}).get("best_model", "Random Forest")
+        st.markdown(
+            f"""
+            - **Data mentah:** {raw_rows:,} baris
+            - **Data bersih:** {clean_rows:,} baris
+            - **Fitur:** 16 fitur geometris
+            - **Kelas:** 7 varietas Dry Bean
+            - **Putaran:** {len(seeds)} run (`{seeds}`)
+            - **Split:** 80% train / 20% test
+            - **CV:** 5-fold Stratified
+            - **Metrik utama:** Macro F1
+            - **Model terbaik:** {best_algo}
+            """
+        )
 
     st.title("Klasifikasi Dry Bean: Decision Tree vs Random Forest")
     st.caption(
-        "Dashboard interaktif untuk prediksi varietas kacang kering (7 kelas) dan evaluasi performa model."
+        "Dashboard interaktif eksperimen 5-run (seed 42–46) untuk prediksi varietas kacang kering dan evaluasi model."
     )
 
     tab_pred, tab_eval, tab_eda = st.tabs(
-        ["Prediksi Varietas", "Evaluasi & Perbandingan Model", "EDA & Ringkasan Data"]
+        ["Prediksi Varietas", "Evaluasi & Perbandingan Model (5-Run)", "EDA & Ringkasan Data"]
     )
 
     model = load_model(available_models[selected_model_name])
@@ -132,7 +172,7 @@ def main():
     )
 
     with tab_pred:
-        st.subheader("Prediksi Sampel Tunggal")
+        st.subheader(f"Prediksi Sampel Tunggal — {selected_run_label}")
 
         preset_col1, preset_col2 = st.columns([2, 3])
         with preset_col1:
@@ -259,83 +299,141 @@ def main():
                 st.error(f"Gagal memproses file CSV: {exc}")
 
     with tab_eval:
-        st.subheader("Performa Final pada Testing Set")
-        final_metrics = load_csv(OUTPUTS_DIR / "final_test_metrics.csv")
-        if final_metrics is not None:
-            dt_row = final_metrics[final_metrics["model"] == "Decision Tree"].iloc[0]
-            rf_row = final_metrics[final_metrics["model"] == "Random Forest"].iloc[0]
-            m1, m2, m3, m4 = st.columns(4)
-            m1.metric("Random Forest Accuracy", f"{rf_row['accuracy']:.2%}")
-            m2.metric("Random Forest Macro F1", f"{rf_row['f1_macro']:.2%}")
-            m3.metric("Decision Tree Accuracy", f"{dt_row['accuracy']:.2%}")
-            m4.metric("Decision Tree Macro F1", f"{dt_row['f1_macro']:.2%}")
+        st.subheader("Ringkasan Performa 5-Run pada Testing Set")
+        perf_summary = load_csv(REPEATED_OUTPUTS_DIR / "five_run_performance_summary.csv")
+        if perf_summary is not None:
+            rf_tuned = perf_summary[
+                (perf_summary["model"] == "Random Forest") & (perf_summary["stage"] == "Tuned")
+            ]
+            dt_tuned = perf_summary[
+                (perf_summary["model"] == "Decision Tree") & (perf_summary["stage"] == "Tuned")
+            ]
+            if not rf_tuned.empty and not dt_tuned.empty:
+                rf_row = rf_tuned.iloc[0]
+                dt_row = dt_tuned.iloc[0]
+                m1, m2, m3, m4 = st.columns(4)
+                m1.metric(
+                    "Random Forest Accuracy (Mean ± Std)",
+                    f"{rf_row['mean_accuracy']:.2%}",
+                    f"± {rf_row['std_accuracy']:.2%}",
+                )
+                m2.metric(
+                    "Random Forest Macro F1 (Mean ± Std)",
+                    f"{rf_row['mean_f1_macro']:.2%}",
+                    f"± {rf_row['std_f1_macro']:.2%}",
+                )
+                m3.metric(
+                    "Decision Tree Accuracy (Mean ± Std)",
+                    f"{dt_row['mean_accuracy']:.2%}",
+                    f"± {dt_row['std_accuracy']:.2%}",
+                )
+                m4.metric(
+                    "Decision Tree Macro F1 (Mean ± Std)",
+                    f"{dt_row['mean_f1_macro']:.2%}",
+                    f"± {dt_row['std_f1_macro']:.2%}",
+                )
+            st.dataframe(perf_summary, width="stretch", hide_index=True)
 
-            st.dataframe(final_metrics, width="stretch", hide_index=True)
+        bvt_df = load_csv(REPEATED_OUTPUTS_DIR / "five_run_baseline_vs_tuned.csv")
+        if bvt_df is not None:
+            st.markdown("#### Perbandingan Baseline vs Tuned (Rata-Rata 5 Run)")
+            st.dataframe(bvt_df, width="stretch", hide_index=True)
 
-        comparison_df = load_csv(OUTPUTS_DIR / "model_comparison.csv")
-        if comparison_df is not None:
-            st.markdown("#### Perbandingan Baseline vs Tuned")
-            st.dataframe(comparison_df, width="stretch", hide_index=True)
+        cv_df = load_csv(REPEATED_OUTPUTS_DIR / "five_run_cv_summary.csv")
+        if cv_df is not None:
+            st.markdown("#### Ringkasan Cross-Validation (5-Fold Stratified CV across 5 Runs)")
+            st.dataframe(cv_df, width="stretch", hide_index=True)
 
-        tuning_df = load_csv(OUTPUTS_DIR / "tuning_summary.csv")
+        tuning_df = load_csv(REPEATED_OUTPUTS_DIR / "five_run_tuning_summary.csv")
         if tuning_df is not None:
-            st.markdown("#### Ringkasan Hyperparameter Tuning (5-Fold Stratified CV)")
-            st.dataframe(tuning_df, width="stretch", hide_index=True)
+            with st.expander("Detail Parameter Terbaik per Putaran (5-Run Tuning Summary)"):
+                st.dataframe(tuning_df, width="stretch", hide_index=True)
 
-        st.markdown("#### Visualisasi Evaluasi")
+        st.markdown("#### Visualisasi Rata-Rata 5-Run")
         col_a, col_b = st.columns(2)
         with col_a:
             show_image_if_exists(
-                OUTPUTS_DIR / "confusion_matrix_random_forest.png",
-                "Confusion Matrix — Random Forest (Tuned)",
+                REPEATED_OUTPUTS_DIR / "mean_confusion_matrix_random_forest.png",
+                "Mean Normalized Confusion Matrix — Random Forest (5-Run)",
             )
             show_image_if_exists(
-                OUTPUTS_DIR / "feature_importance_random_forest.png",
-                "Feature Importance — Random Forest",
+                REPEATED_OUTPUTS_DIR / "mean_mdi_importance_random_forest.png",
+                "Mean MDI Feature Importance — Random Forest (5-Run)",
+            )
+            show_image_if_exists(
+                REPEATED_OUTPUTS_DIR / "mean_permutation_importance_random_forest.png",
+                "Mean Permutation Importance — Random Forest (5-Run)",
             )
         with col_b:
             show_image_if_exists(
-                OUTPUTS_DIR / "confusion_matrix_decision_tree.png",
-                "Confusion Matrix — Decision Tree (Tuned)",
+                REPEATED_OUTPUTS_DIR / "mean_confusion_matrix_decision_tree.png",
+                "Mean Normalized Confusion Matrix — Decision Tree (5-Run)",
             )
             show_image_if_exists(
-                OUTPUTS_DIR / "feature_importance_decision_tree.png",
-                "Feature Importance — Decision Tree",
+                REPEATED_OUTPUTS_DIR / "mean_mdi_importance_decision_tree.png",
+                "Mean MDI Feature Importance — Decision Tree (5-Run)",
+            )
+            show_image_if_exists(
+                REPEATED_OUTPUTS_DIR / "mean_permutation_importance_decision_tree.png",
+                "Mean Permutation Importance — Decision Tree (5-Run)",
             )
 
         col_c, col_d = st.columns(2)
         with col_c:
             show_image_if_exists(
-                OUTPUTS_DIR / "model_comparison_macro_f1.png",
-                "Perbandingan Macro F1",
+                REPEATED_OUTPUTS_DIR / "five_run_model_comparison_macro_f1.png",
+                "Perbandingan Macro F1 (5-Run)",
             )
         with col_d:
             show_image_if_exists(
-                OUTPUTS_DIR / "decision_tree_top_depth_3.png",
-                "Struktur Decision Tree (Depth 3)",
+                REPEATED_OUTPUTS_DIR / "five_run_cross_validation_comparison.png",
+                "Perbandingan 5-Fold CV Macro F1 (5-Run)",
             )
 
+        st.divider()
+        st.markdown(f"#### Detail Evaluasi {selected_run_label}")
+        run_out_dir = REPEATED_OUTPUTS_DIR / f"run_{run_num}_seed_{seed}"
+
+        all_runs_df = load_csv(REPEATED_OUTPUTS_DIR / "five_run_final_metrics.csv")
+        if all_runs_df is not None and "run" in all_runs_df.columns:
+            run_metrics_df = all_runs_df[all_runs_df["run"] == run_num]
+            if not run_metrics_df.empty:
+                st.dataframe(run_metrics_df, width="stretch", hide_index=True)
+
+        run_col1, run_col2 = st.columns(2)
+        with run_col1:
+            show_image_if_exists(
+                run_out_dir / "confusion_matrix_random_forest.png",
+                f"Confusion Matrix Random Forest — {selected_run_label}",
+            )
+        with run_col2:
+            show_image_if_exists(
+                run_out_dir / "confusion_matrix_decision_tree.png",
+                f"Confusion Matrix Decision Tree — {selected_run_label}",
+            )
+
+        show_image_if_exists(
+            run_out_dir / "decision_tree_top_depth_3.png",
+            f"Struktur Decision Tree (Depth 3) — {selected_run_label}",
+        )
+
         rep_col1, rep_col2 = st.columns(2)
-        rf_rep = load_csv(OUTPUTS_DIR / "classification_report_random_forest.csv")
-        dt_rep = load_csv(OUTPUTS_DIR / "classification_report_decision_tree.csv")
+        rf_rep = load_csv(run_out_dir / "classification_report_random_forest.csv")
+        dt_rep = load_csv(run_out_dir / "classification_report_decision_tree.csv")
         with rep_col1:
             if rf_rep is not None:
-                st.markdown("#### Classification Report — Random Forest")
+                st.markdown(f"##### Classification Report Random Forest — {selected_run_label}")
                 st.dataframe(rf_rep, width="stretch", hide_index=True)
         with rep_col2:
             if dt_rep is not None:
-                st.markdown("#### Classification Report — Decision Tree")
+                st.markdown(f"##### Classification Report Decision Tree — {selected_run_label}")
                 st.dataframe(dt_rep, width="stretch", hide_index=True)
 
     with tab_eda:
         st.subheader("Ringkasan & Catatan Eksperimen")
-        summary_md = load_text(OUTPUTS_DIR / "experiment_summary.md")
-        notes_md = load_text(OUTPUTS_DIR / "interpretation_notes.md")
+        summary_md = load_text(REPEATED_OUTPUTS_DIR / "experiment_summary.md")
         if summary_md:
             st.markdown(summary_md)
-        if notes_md:
-            with st.expander("Catatan Interpretasi & Batasan Metodologi"):
-                st.markdown(notes_md)
 
         eda_col1, eda_col2 = st.columns(2)
         with eda_col1:

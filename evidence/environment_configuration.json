@@ -1,0 +1,25 @@
+{
+    "python_version": "3.13.14",
+    "python_implementation": "CPython",
+    "operating_system": "Windows",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas_version": "3.0.3",
+    "numpy_version": "2.3.3",
+    "matplotlib_version": "3.10.6",
+    "scikit_learn_version": "1.8.0",
+    "project_directory": "C:\\Users\\andi aria\\Downloads\\Dry_Bean_Classification_Submission_FINAL_1\\Dry_Bean_Classification_Submission",
+    "dataset_path": "C:\\Users\\andi aria\\Downloads\\Dry_Bean_Classification_Submission_FINAL_1\\Dry_Bean_Classification_Submission\\data\\Dry_Bean.csv",
+    "random_state": 42,
+    "test_size": 0.2,
+    "cross_validation_folds": 5,
+    "experiment_repetitions": 5,
+    "experiment_seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+    ],
+    "target_column": "Class",
+    "tuning_scoring": "f1_macro"
+}

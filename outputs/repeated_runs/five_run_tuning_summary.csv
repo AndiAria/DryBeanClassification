@@ -1,0 +1,11 @@
+run,random_state,model,candidate_count,cv_folds,best_cv_macro_f1,best_cv_std,best_params,tuning_seconds
+1,42,Decision Tree,8,5,0.9206258356012578,0.0034230513068801605,"{""max_depth"": 12, ""min_samples_leaf"": 3, ""min_samples_split"": 10}",10.15869670000393
+1,42,Random Forest,8,5,0.9353444491112628,0.006138946130335485,"{""max_depth"": null, ""min_samples_leaf"": 2, ""n_estimators"": 250}",309.90693470000406
+2,43,Decision Tree,8,5,0.9212224709321802,0.006762715041197705,"{""max_depth"": 12, ""min_samples_leaf"": 3, ""min_samples_split"": 10}",10.377083300001686
+2,43,Random Forest,8,5,0.9354323617861515,0.006748126879706289,"{""max_depth"": 20, ""min_samples_leaf"": 2, ""n_estimators"": 250}",315.9023323000001
+3,44,Decision Tree,8,5,0.9180790012160847,0.006866019402261542,"{""max_depth"": 12, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",10.854959000018425
+3,44,Random Forest,8,5,0.9347495369219981,0.003737186884408309,"{""max_depth"": 20, ""min_samples_leaf"": 2, ""n_estimators"": 250}",312.21416810000665
+4,45,Decision Tree,8,5,0.9199936434370993,0.004583808962959718,"{""max_depth"": 12, ""min_samples_leaf"": 3, ""min_samples_split"": 10}",10.8180546000076
+4,45,Random Forest,8,5,0.9374301327466579,0.004186558993312784,"{""max_depth"": null, ""min_samples_leaf"": 1, ""n_estimators"": 250}",306.61409800002
+5,46,Decision Tree,8,5,0.9177520306555564,0.007204323868847246,"{""max_depth"": 12, ""min_samples_leaf"": 3, ""min_samples_split"": 10}",10.106888099981006
+5,46,Random Forest,8,5,0.9357305884713192,0.005080997971660479,"{""max_depth"": null, ""min_samples_leaf"": 1, ""n_estimators"": 250}",299.6509309000103

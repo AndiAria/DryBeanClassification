@@ -1,0 +1,3 @@
+run,random_state,model,training_rows,feature_count,best_cv_macro_f1,fit_seconds,best_parameters
+1,42,Decision Tree,10834,16,0.9206258356012578,0.34769960000994615,"{'max_depth': 12, 'min_samples_leaf': 3, 'min_samples_split': 10}"
+1,42,Random Forest,10834,16,0.9353444491112628,12.037842299992917,"{'max_depth': None, 'min_samples_leaf': 2, 'n_estimators': 250}"

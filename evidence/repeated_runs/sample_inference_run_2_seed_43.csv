@@ -1,0 +1,9 @@
+run,random_state,sample_number,test_row_index,actual_class,predicted_class,correct
+2,43,1,10880,DERMASON,DERMASON,True
+2,43,2,1006,SEKER,SEKER,True
+2,43,3,6512,HOROZ,HOROZ,True
+2,43,4,12966,DERMASON,DERMASON,True
+2,43,5,8962,SIRA,SIRA,True
+2,43,6,2479,BARBUNYA,BARBUNYA,True
+2,43,7,8926,SIRA,SIRA,True
+2,43,8,1841,SEKER,SEKER,True

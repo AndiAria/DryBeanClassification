@@ -1,0 +1,6 @@
+run,random_state,model,total_samples,correct_predictions,incorrect_predictions,sample_accuracy,model_artifact
+1,42,Random Forest Tuned,8,8,0,1.0,C:\Users\andi aria\Downloads\Dry_Bean_Classification_Submission_FINAL_1\Dry_Bean_Classification_Submission\models\repeated_runs\run_1_seed_42\random_forest_tuned.joblib
+2,43,Random Forest Tuned,8,8,0,1.0,C:\Users\andi aria\Downloads\Dry_Bean_Classification_Submission_FINAL_1\Dry_Bean_Classification_Submission\models\repeated_runs\run_2_seed_43\random_forest_tuned.joblib
+3,44,Random Forest Tuned,8,8,0,1.0,C:\Users\andi aria\Downloads\Dry_Bean_Classification_Submission_FINAL_1\Dry_Bean_Classification_Submission\models\repeated_runs\run_3_seed_44\random_forest_tuned.joblib
+4,45,Random Forest Tuned,8,8,0,1.0,C:\Users\andi aria\Downloads\Dry_Bean_Classification_Submission_FINAL_1\Dry_Bean_Classification_Submission\models\repeated_runs\run_4_seed_45\random_forest_tuned.joblib
+5,46,Random Forest Tuned,8,8,0,1.0,C:\Users\andi aria\Downloads\Dry_Bean_Classification_Submission_FINAL_1\Dry_Bean_Classification_Submission\models\repeated_runs\run_5_seed_46\random_forest_tuned.joblib
